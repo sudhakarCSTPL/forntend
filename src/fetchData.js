@@ -9,8 +9,10 @@ const [isloading,setLoading] = useState(true)
 
       const fetchNow = async () => {
       try {
-        const {data: response} = await axios.get(url);
-        console.log(data)
+        const {data: response} = await axios.get(url); 
+        const {conversionrate: responsedetails} = await axios.get('https://v6.exchangerate-api.com/v6/10bdcd7446f42655f8d21b71/latest/USD'); 
+        console.log(data);
+        console.log(conversionrate);
         setData(response);
       } catch (error) {
         console.error(error)
@@ -21,7 +23,7 @@ const [isloading,setLoading] = useState(true)
 
 
 return {
-  data, isloading
+  data, isloading, conversionrate
 };
 
 };
