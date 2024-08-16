@@ -30,15 +30,12 @@ function App() {
 const handleChange = async () => {
 
   const url  = `http://localhost:8089/api/v1/coindesk/value?startdate=${startDate}&enddate=${endDate}&currency=${selectedcurrency}`;
-  const currencyurl = 'https://hexarate.paikama.co/api/rates/latest/USD?target=${selectedcurrency}';
-
+  
   try {
     const {data: response} = await axios.get(url);
     console.log(data);
     setFecthedData(response);
-    //  const {currencydata: currency} = await axios.get(currencyurl);
-    //  console.log(currencydata);
-    //  setFecthedcurrency(currency);
+   
   } catch (error) {
     console.error(error)
   } finally {
