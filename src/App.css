@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  margin: 5vi;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -15,12 +16,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
@@ -35,4 +36,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.form-inline {
+  width: 50%;
+}
+
+.form-group {
+  width: 50%;
+}
+
+.input-group {
+  width: 50% !important;
+}
+
+.form-control {
+  width: 50% !important;
+}
+
+span.input-group-addon {
+  width: 50px !important;
 }
